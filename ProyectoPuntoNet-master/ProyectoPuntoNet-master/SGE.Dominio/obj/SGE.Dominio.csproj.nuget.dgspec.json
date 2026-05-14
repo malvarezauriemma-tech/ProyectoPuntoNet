@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\PuntoNet\\ProyectoPuntoNet\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Dominio\\SGE.Dominio.csproj": {}
+    "C:\\Users\\malva\\SGE\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Dominio\\SGE.Dominio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\PuntoNet\\ProyectoPuntoNet\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Dominio\\SGE.Dominio.csproj": {
+    "C:\\Users\\malva\\SGE\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Dominio\\SGE.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\PuntoNet\\ProyectoPuntoNet\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Dominio\\SGE.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\malva\\SGE\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Dominio\\SGE.Dominio.csproj",
         "projectName": "SGE.Dominio",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\PuntoNet\\ProyectoPuntoNet\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Dominio\\SGE.Dominio.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\PuntoNet\\ProyectoPuntoNet\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Dominio\\obj\\",
+        "projectPath": "C:\\Users\\malva\\SGE\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Dominio\\SGE.Dominio.csproj",
+        "packagesPath": "C:\\Users\\malva\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\malva\\SGE\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\malva\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -38,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net10.0": {
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

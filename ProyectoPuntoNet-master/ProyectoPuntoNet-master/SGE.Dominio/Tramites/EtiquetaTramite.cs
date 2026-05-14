@@ -4,8 +4,8 @@ public enum EtiquetaTramite
 {
     EscritoPresentado,
     PaseAEstudio,
-    despacho,
-    resolucion,
-    Nottificacion,
-    paseAlarchivo
+    Despacho,
+    Resolucion,
+    Notificacion,
+    PaseAlArchivo
 }
