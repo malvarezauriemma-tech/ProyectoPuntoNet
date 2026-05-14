@@ -1,5 +1,5 @@
 namespace SGE.Dominio.Expedientes;
-
+using SGE.Dominio.Expediente;
 public class Expediente
 {
     public Guid Id {get ; private set;}

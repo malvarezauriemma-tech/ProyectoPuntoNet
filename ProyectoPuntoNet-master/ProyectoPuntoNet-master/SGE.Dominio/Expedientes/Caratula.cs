@@ -1,3 +1,6 @@
+using SGE.Dominio.Comun;
+
+namespace SGE.Dominio.Expedientes;
 public record class Caratula
 {
     public String Valor {get;}
