@@ -1,4 +1,6 @@
 namespace SGE.Dominio.Tramites;
+using System;
+using SGE.Dominio.Comun;
 
 public class Tramite
 {
@@ -16,24 +18,43 @@ public class Tramite
 
     public Guid UsuarioUltimoCambio { get; private set; }
 
-    public Tramite(
-        Guid expedienteId,
-        EtiquetaTramite etiqueta,
-        ContenidoTramite contenido,
-        Guid usuarioId)
+    // constructor privado para reconstruccion
+    private Tramite(Guid id, Guid expedienteId, EtiquetaTramite etiqueta, ContenidoTramite contenido, DateTime fechaCreacion, DateTime fechaModif, Guid usuarioId)
     {
-        Id = Guid.NewGuid();
+        if (id == Guid.Empty)
+        {
+            throw new DominioException("ID inválido");
+        }
+        if (expedienteId == Guid.Empty)
+        {
+            throw new DominioException("ExpedienteID obligatorio");
+        }
+        if (usuarioId == Guid.Empty)
+        {
+            throw new DominioException("Usuario obligatorio");
+        }
+        if (fechaModif < fechaCreacion)
+        {
+            throw new DominioException("Fecha de modificacion inválida");
+        }
 
+        Id = id;
         ExpedienteId = expedienteId;
-
         Etiqueta = etiqueta;
-
-        Contenido = contenido;
-
-        FechaCreacion = DateTime.Now;
-
-        FechaUltimaModificacion = DateTime.Now;
-
+        Contenido = contenido ?? throw new DominioException("El contenido es obligatorio");
+        FechaCreacion = fechaCreacion;
+        FechaUltimaModificacion = fechaModif;
         UsuarioUltimoCambio = usuarioId;
+    }
+
+    // constructor publico (usa el privado)
+    public Tramite(Guid expedienteId, EtiquetaTramite etiqueta, ContenidoTramite contenido, Guid usuarioId): this(Guid.NewGuid(), expedienteId, etiqueta, contenido, DateTime.Now, DateTime.Now, usuarioId)
+    {    
+    }
+
+    // Factory method para reconstruccion, lo usa repositorio txt 
+    public static Tramite Reconstruir(Guid id, Guid expedienteId, EtiquetaTramite etiqueta, ContenidoTramite contenido, DateTime fechaCreacion, DateTime fechaModif, Guid usuarioId)
+    {
+        return new Tramite(id, expedienteId, etiqueta, contenido, fechaCreacion, fechaModif, usuarioId);
     }
 }
