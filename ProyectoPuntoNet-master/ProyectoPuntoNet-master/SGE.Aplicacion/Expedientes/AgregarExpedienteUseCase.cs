@@ -2,6 +2,7 @@ using System;
 using SGE.Aplicacion.Expedientes;
 using SGE.Dominio.Expedientes;
 using SGE.Aplicacion.Excepcion;
+using SGE.Aplicacion.Autorizacion;
 
 namespace SGE.Aplicacion;
 

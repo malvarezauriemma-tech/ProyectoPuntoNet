@@ -57,4 +57,19 @@ public class Tramite
     {
         return new Tramite(id, expedienteId, etiqueta, contenido, fechaCreacion, fechaModif, usuarioId);
     }
+
+    // metodo para poder modificar el contenido con los casos de uso 
+    public void Modificar(EtiquetaTramite nuevaEtiqueta, ContenidoTramite nuevoContenido, Guid usuarioId)
+    {
+        if (usuarioId == Guid.Empty)
+        {
+            throw new DominioException("Usuario de modificacion invalido");
+        }
+        Etiqueta = nuevaEtiqueta;
+        Contenido = nuevoContenido ?? throw new DominioException("El contenido es obligatorio");
+
+        // actualizar datos
+        UsuarioUltimoCambio = usuarioId;
+        FechaUltimaModificacion = DateTime.Now;
+    }
 }
