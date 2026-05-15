@@ -1,6 +1,6 @@
 using System;
 using SGE.Aplicacion.Excepcion;
-using SGE.Aplicacion.Excepcion;
+
 using SGE.Dominio.Expedientes;
 
 namespace SGE.Aplicacion.Expedientes;

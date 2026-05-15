@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net10.0": {
+      "SGE.Aplicacion/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "SGE.Dominio": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SGE.Aplicacion.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SGE.Aplicacion.dll": {}
+        }
+      },
       "SGE.Dominio/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
@@ -15,6 +28,11 @@
     }
   },
   "libraries": {
+    "SGE.Aplicacion/1.0.0": {
+      "type": "project",
+      "path": "../SGE.Aplicacion/SGE.Aplicacion.csproj",
+      "msbuildProject": "../SGE.Aplicacion/SGE.Aplicacion.csproj"
+    },
     "SGE.Dominio/1.0.0": {
       "type": "project",
       "path": "../SGE.Dominio/SGE.Dominio.csproj",
@@ -23,6 +41,7 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "SGE.Aplicacion >= 1.0.0",
       "SGE.Dominio >= 1.0.0"
     ]
   },
@@ -51,6 +70,9 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
+            "C:\\Users\\malva\\SGE\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Aplicacion\\SGE.Aplicacion.csproj": {
+              "projectPath": "C:\\Users\\malva\\SGE\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Aplicacion\\SGE.Aplicacion.csproj"
+            },
             "C:\\Users\\malva\\SGE\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Dominio\\SGE.Dominio.csproj": {
               "projectPath": "C:\\Users\\malva\\SGE\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Dominio\\SGE.Dominio.csproj"
             }

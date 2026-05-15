@@ -1,5 +1,4 @@
-// Importa la interfaz y el enum Permiso
-using SGE.Aplicacion.Autorizacion;
+using System;
 
 namespace SGE.Infraestructura.Autorizacion;
 

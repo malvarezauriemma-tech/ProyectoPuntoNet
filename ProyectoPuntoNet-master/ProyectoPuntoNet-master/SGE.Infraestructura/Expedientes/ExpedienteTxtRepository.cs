@@ -1,6 +1,8 @@
-using SGE.Aplicacion.Expedientes;
-
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using SGE.Dominio.Expedientes;
+using SGE.Aplicacion;
 
 namespace SGE.Infraestructura.Expedientes;
 
@@ -11,7 +13,6 @@ public class ExpedienteTxtRepository : IExpedienteRepository
 
 
 
-
     // AGREGAR EXPEDIENTE
     public void Agregar(Expediente expediente)
     {
@@ -19,7 +20,7 @@ public class ExpedienteTxtRepository : IExpedienteRepository
         // usando ; como separador
         string linea =
             $"{expediente.Id};" +
-            $"{expediente.Caratula.Texto};" +
+            $"{expediente.Caratula.Valor};" +
             $"{expediente.FechaCreacion};" +
             $"{expediente.FechaUltimaModificacion};" +
             $"{expediente.UsuarioUltimoCambio};" +
@@ -30,9 +31,9 @@ public class ExpedienteTxtRepository : IExpedienteRepository
     }
 
 
-
+    // ACOMODAR A PARTIR DE ACA
     // OBTENER TODOS
-    public List<Expediente> ObtenerTodos()
+    public IEnumerable<Expediente> ObtenerTodos()
     {
         // Lista para guardar los expedientes
         var expedientes = new List<Expediente>();
@@ -46,7 +47,6 @@ public class ExpedienteTxtRepository : IExpedienteRepository
         }
 
 
-        // ??????
         var lineas = File.ReadAllLines(_rutaArchivo);
 
         foreach (var linea in lineas)
@@ -69,5 +69,51 @@ public class ExpedienteTxtRepository : IExpedienteRepository
         }
 
         return expedientes;
+    }
+
+
+    // OBTENER POR ID
+    public Expediente? ObtenerPorId(Guid id)
+    {
+        return ObtenerTodos().FirstOrDefault(x => x.Id == id);
+    }
+
+
+    // MODIFICAR EXPEDIENTE
+    public void Modificar(Expediente expediente)
+    {
+        var expedientes = ObtenerTodos().ToList();
+        var index = expedientes.FindIndex(x => x.Id == expediente.Id);
+        if (index < 0)
+        {
+            throw new InvalidOperationException("Expediente no encontrado");
+        }
+
+        expedientes[index] = expediente;
+        GuardarTodos(expedientes);
+    }
+
+
+    // ELIMINAR EXPEDIENTE
+    public void Eliminar(Guid id)
+    {
+        var expedientes = ObtenerTodos().ToList();
+        var expedientesFiltrados = expedientes.Where(x => x.Id != id).ToList();
+        GuardarTodos(expedientesFiltrados);
+    }
+
+
+    private void GuardarTodos(IEnumerable<Expediente> expedientes)
+    {
+        var lineas = expedientes.Select(expediente =>
+            $"{expediente.Id};" +
+            $"{expediente.Caratula.Valor};" +
+            $"{expediente.FechaCreacion};" +
+            $"{expediente.FechaUltimaModificacion};" +
+            $"{expediente.UsuarioUltimoCambio};" +
+            $"{expediente.Estado}"
+        );
+
+        File.WriteAllLines(_rutaArchivo, lineas);
     }
 }
