@@ -2,6 +2,7 @@ namespace SGE.Aplicacion.Expedientes;
 
 using SGE.Dominio.Expedientes;
 using SGE.Dominio.Tramites;
+using SGE.Aplicacion.Tramites;
 using System.Linq;
 
 public class ActualizacionEstadoExpedienteService(IExpedienteRepository expedienteRepo, ITramiteRepository tramiteRepo)

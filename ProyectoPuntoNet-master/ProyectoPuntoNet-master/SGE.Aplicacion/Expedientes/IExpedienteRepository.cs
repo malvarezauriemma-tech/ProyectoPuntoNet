@@ -1,6 +1,6 @@
 using System;
 
-namespace SGE.Aplicacion;
+namespace SGE.Aplicacion.Expedientes;
 using SGE.Dominio.Expedientes;
 
 

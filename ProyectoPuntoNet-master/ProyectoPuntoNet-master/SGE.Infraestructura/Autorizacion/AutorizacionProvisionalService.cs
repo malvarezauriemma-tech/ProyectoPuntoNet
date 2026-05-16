@@ -1,4 +1,5 @@
 using System;
+using SGE.Aplicacion.Autorizacion;
 
 namespace SGE.Infraestructura.Autorizacion;
 

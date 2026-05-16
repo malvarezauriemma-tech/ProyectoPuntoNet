@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using SGE.Dominio.Expedientes;
-using SGE.Aplicacion;
+using SGE.Aplicacion.Expedientes;
+using SGE.Aplicacion.Excepcion;
 
 namespace SGE.Infraestructura.Expedientes;
 
@@ -16,18 +18,10 @@ public class ExpedienteTxtRepository : IExpedienteRepository
     // AGREGAR EXPEDIENTE
     public void Agregar(Expediente expediente)
     {
-        // Convierte el expediente en una línea de texto
-        // usando ; como separador
-        string linea =
-            $"{expediente.Id};" +
-            $"{expediente.Caratula.Valor};" +
-            $"{expediente.FechaCreacion};" +
-            $"{expediente.FechaUltimaModificacion};" +
-            $"{expediente.UsuarioUltimoCambio};" +
-            $"{expediente.Estado}";
+        string linea = FormatearLinea(expediente);
 
         // Agrega esa línea al archivo
-        File.AppendAllLines(_rutaArchivo, new[] { linea });
+        File.AppendAllLines(_rutaArchivo, [linea]);
     }
 
 
@@ -37,7 +31,6 @@ public class ExpedienteTxtRepository : IExpedienteRepository
     {
         // Lista para guardar los expedientes
         var expedientes = new List<Expediente>();
-
 
         // Si el archivo no existe todavía,
         // devuelve lista vacía
@@ -84,13 +77,14 @@ public class ExpedienteTxtRepository : IExpedienteRepository
     {
         var expedientes = ObtenerTodos().ToList();
         var index = expedientes.FindIndex(x => x.Id == expediente.Id);
-        if (index < 0)
+        
+        if (index == -1)
         {
-            throw new InvalidOperationException("Expediente no encontrado");
+            throw new RepositorioException($"No se encontro el expediente con ID: {expediente.Id}");
         }
 
         expedientes[index] = expediente;
-        GuardarTodos(expedientes);
+        GuardarListaCompleta(expedientes);
     }
 
 
@@ -98,22 +92,26 @@ public class ExpedienteTxtRepository : IExpedienteRepository
     public void Eliminar(Guid id)
     {
         var expedientes = ObtenerTodos().ToList();
-        var expedientesFiltrados = expedientes.Where(x => x.Id != id).ToList();
-        GuardarTodos(expedientesFiltrados);
+        var expedienteAEliminar = expedientes.FirstOrDefault(x => x.Id == id);
+
+        if (expedienteAEliminar == null)
+        {
+            throw new RepositorioException($"No se puede eliminar el expediente con ID: {id}");
+        }
+
+        expedientes.Remove(expedienteAEliminar);
+        GuardarListaCompleta(expedientes);
     }
 
 
-    private void GuardarTodos(IEnumerable<Expediente> expedientes)
+    private void GuardarListaCompleta(IEnumerable<Expediente> expedientes)
     {
-        var lineas = expedientes.Select(expediente =>
-            $"{expediente.Id};" +
-            $"{expediente.Caratula.Valor};" +
-            $"{expediente.FechaCreacion};" +
-            $"{expediente.FechaUltimaModificacion};" +
-            $"{expediente.UsuarioUltimoCambio};" +
-            $"{expediente.Estado}"
-        );
-
+        var lineas = expedientes.Select(FormatearLinea);
         File.WriteAllLines(_rutaArchivo, lineas);
+    }
+
+    private string FormatearLinea(Expediente e)
+    {
+        return $"{e.Id};{e.Caratula.Valor};{e.FechaCreacion};{e.FechaUltimaModificacion};{e.UsuarioUltimoCambio};{e.Estado}";
     }
 }
