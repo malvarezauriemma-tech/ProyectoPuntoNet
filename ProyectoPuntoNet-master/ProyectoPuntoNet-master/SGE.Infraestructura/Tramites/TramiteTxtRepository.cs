@@ -61,7 +61,7 @@ public class TramiteTxtRepository : ITramiteRepository
 
     public void Modificar(Tramite tramite)
     {
-        var tramites = ObtenerTodos();
+        var tramites = ObtenerTodos().ToList();
         int indice = tramites.FindIndex(t => t.Id == tramite.Id);
 
         if (indice == -1)
@@ -75,7 +75,7 @@ public class TramiteTxtRepository : ITramiteRepository
 
     public void Eliminar(Guid id)
     {
-        var tramites = ObtenerTodos();
+        var tramites = ObtenerTodos().ToList();
         var tramiteAEliminar = tramites.FirstOrDefault(t => t.Id == id);
 
         if (tramiteAEliminar == null)
