@@ -26,7 +26,7 @@ public class TramiteTxtRepository : ITramiteRepository
 
 
     // OBTENER TODOS
-    public List<Tramite> ObtenerTodos()
+    public IEnumerable<Tramite> ObtenerTodos()
     {
         var tramites = new List<Tramite>();
 
@@ -93,7 +93,7 @@ public class TramiteTxtRepository : ITramiteRepository
         return ObtenerTodos().FirstOrDefault(t => t.Id == id);
     }
 
-    public List<Tramite> ObtenerPorExpedienteId(Guid expedienteId)
+    public IEnumerable<Tramite> ObtenerPorExpedienteId(Guid expedienteId)
     {
         return ObtenerTodos().Where(t => t.ExpedienteId == expedienteId).ToList();
     }
