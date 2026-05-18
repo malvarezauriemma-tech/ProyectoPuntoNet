@@ -1,4 +1,4 @@
-namespace SGE.Dominio.Expediente;
+namespace SGE.Dominio.Expedientes;
 
 public enum EstadoExpediente
 {

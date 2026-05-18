@@ -6,7 +6,9 @@ using SGE.Aplicacion.Excepcion;
 using SGE.Dominio.Tramites;
 using SGE.Aplicacion;
 
-public class AgregarTramiteUseCase(ITramiteRepository tramiteRepo, IAutorizacionService autorizacionService, ActualizacionEstadoExpedienteService estadoService)
+namespace SGE.Aplicacion.Tramites;
+
+public class AgregarTramiteUseCase(ITramiteRepository tramiteRepo, IExpedienteRepository expedienteRepository, IAutorizacionService autorizacionService, ActualizacionEstadoExpedienteService estadoService)
 {
     public AgregarTramiteResponse Ejecutar(AgregarTramiteRequest request)
     {
@@ -14,6 +16,13 @@ public class AgregarTramiteUseCase(ITramiteRepository tramiteRepo, IAutorizacion
         if (!autorizacionService.PoseeElPermiso(request.UsuarioId, Permiso.TramiteAlta))
         {
             throw new AutorizacionException("No tiene permiso para agregar tramites");
+        }
+
+        // valido que el expediente exista
+        var expediente = expedienteRepository.ObtenerPorId(request.ExpedienteId);
+        if (expediente == null)
+        {
+            throw new EntidadNoEncontradaException($"No existe el expediente con ID {request.ExpedienteId}");
         }
 
         // creo objeto de valor y entidad

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SGE.Dominio")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c704e02153bff2e801d323fd4078afb293de7c13")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09d44a63871688212b7e009b2ec0cc312f4bae5f")]
 [assembly: System.Reflection.AssemblyProductAttribute("SGE.Dominio")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SGE.Dominio")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

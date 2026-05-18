@@ -17,9 +17,7 @@ public class TramiteTxtRepository : ITramiteRepository
 
     // AGREGAR TRÁMITE
     public void Agregar(Tramite tramite)
-    {
-
-
+    { 
         string linea = FormatearLinea(tramite);
 
         // Agrega la línea al archivo

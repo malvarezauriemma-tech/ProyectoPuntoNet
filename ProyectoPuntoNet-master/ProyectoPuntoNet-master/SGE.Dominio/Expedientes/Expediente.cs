@@ -11,25 +11,33 @@ public class Expediente
     public Guid UsuarioUltimoCambio {get; private set;}
     public EstadoExpediente Estado {get; private set;} // enumerativo
 
-    public Expediente(Caratula caratula, Guid usuarioID)
-    {
-        Id = Guid.NewGuid();
-        Caratula = caratula;
-        UsuarioUltimoCambio = usuarioID;
-        FechaCreacion = DateTime.Now;
-        FechaUltimaModificacion = DateTime.Now;
-        Estado = EstadoExpediente.RecienIniciado;
-    }
-
     // constructor privado para la reconstruccion
     private Expediente(Guid id, Caratula caratula, DateTime fechaCreacion, DateTime fechaUltMod, Guid usuarioID, EstadoExpediente estado)
     {
+        if (id == Guid.Empty)
+        {
+            throw new DominioException("El id no puede estar vacio");
+        }
+        if (usuarioID == Guid.Empty)
+        {
+            throw new DominioException("El usuario es obligatorio");
+        }
+        if (fechaUltMod < fechaCreacion)
+        {
+            throw new DominioException("La fecha de modificación es incoherente");
+        }
         Id =id;
-        Caratula = caratula;
+        Caratula = caratula ?? throw new DominioException("La caratula es obligatoria");
         FechaCreacion = fechaCreacion;
         FechaUltimaModificacion = fechaUltMod;
         UsuarioUltimoCambio = usuarioID;
         Estado = estado;
+    }
+
+    // constructor publico para expedientes nuevos, usa del constructor privado
+    public Expediente(Caratula caratula, Guid usuarioID): this(Guid.NewGuid(), caratula, DateTime.Now, DateTime.Now, usuarioID, EstadoExpediente.RecienIniciado)
+    {
+        
     }
 
     // metodo publico para usar la capa de infraestructura para reconstruir 

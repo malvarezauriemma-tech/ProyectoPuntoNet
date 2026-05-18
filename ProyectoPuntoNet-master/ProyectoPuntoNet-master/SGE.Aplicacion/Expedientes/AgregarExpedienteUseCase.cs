@@ -4,7 +4,7 @@ using SGE.Dominio.Expedientes;
 using SGE.Aplicacion.Excepcion;
 using SGE.Aplicacion.Autorizacion;
 
-namespace SGE.Aplicacion;
+namespace SGE.Aplicacion.Expedientes;
 
 public class AgregarExpedienteUseCase(IExpedienteRepository respositorio, IAutorizacionService autorizacionService)
 {

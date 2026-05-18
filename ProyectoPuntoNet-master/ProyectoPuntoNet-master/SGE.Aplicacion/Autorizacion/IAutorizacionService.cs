@@ -1,6 +1,6 @@
 using System;
 
-namespace SGE.Aplicacion;
+namespace SGE.Aplicacion.Autorizacion;
 
 public interface IAutorizacionService
 {
