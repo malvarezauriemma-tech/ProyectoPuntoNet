@@ -10,5 +10,5 @@ public interface ITramiteRepository
     void Modificar(Tramite tramite);
     void Eliminar(Guid id);
     Tramite? ObtenerPorId(Guid id);
-    List<Tramite> ObtenerPorExpedienteId(Guid expedienteId);
+    IEnumerable<Tramite> ObtenerPorExpedienteId(Guid expedienteId);
 }
