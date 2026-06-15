@@ -1,3 +1,3 @@
 namespace SGE.Aplicacion.Tramites;
 
-public record class EliminarTramiteRequest(Guid TramiteId, Guid IdUsuario);
+public record class EliminarTramiteRequest(Guid TramiteId, Guid UsuarioId);

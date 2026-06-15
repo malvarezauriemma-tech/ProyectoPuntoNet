@@ -8,7 +8,7 @@ public class EliminarTramiteUseCase(ITramiteRepository tramiteRepo, IAutorizacio
 {
     public EliminarTramiteResponse Ejecutar(EliminarTramiteRequest request)
     {
-        if (!autorizacionService.PoseeElPermiso(request.IdUsuario, Permiso.TramiteBaja))
+        if (!autorizacionService.PoseeElPermiso(request.UsuarioId, Permiso.TramiteBaja))
         {
             throw new AutorizacionException("No tiene permisos para eliminar tramites");
         }
@@ -25,7 +25,7 @@ public class EliminarTramiteUseCase(ITramiteRepository tramiteRepo, IAutorizacio
         tramiteRepo.Eliminar(request.TramiteId);
 
         // le pido al servicio que actualice el estado del expediente cosa de que, si no quedan tramites, lo ponga en RecienIniciado 
-        actualizadorEstado.Ejecutar(expedienteId, request.IdUsuario);
+        actualizadorEstado.Ejecutar(expedienteId, request.UsuarioId);
 
         return new EliminarTramiteResponse();
     }

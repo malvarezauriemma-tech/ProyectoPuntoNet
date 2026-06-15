@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\malva\\SGE\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Dominio\\SGE.Dominio.csproj",
+      "projectUniqueName": "C:\\Users\\malva\\Alvarez_Cocuzza_Trabajo1\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Dominio\\SGE.Dominio.csproj",
       "projectName": "SGE.Dominio",
-      "projectPath": "C:\\Users\\malva\\SGE\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Dominio\\SGE.Dominio.csproj",
+      "projectPath": "C:\\Users\\malva\\Alvarez_Cocuzza_Trabajo1\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Dominio\\SGE.Dominio.csproj",
       "packagesPath": "C:\\Users\\malva\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\malva\\SGE\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Dominio\\obj\\",
+      "outputPath": "C:\\Users\\malva\\Alvarez_Cocuzza_Trabajo1\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\malva\\AppData\\Roaming\\NuGet\\NuGet.Config"
