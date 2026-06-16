@@ -47,6 +47,7 @@ public class Tramite
         UsuarioUltimoCambio = usuarioId;
     }
 
+    protected Tramite() {}
     // constructor publico (usa el privado)
     public Tramite(Guid expedienteId, EtiquetaTramite etiqueta, ContenidoTramite contenido, Guid usuarioId): this(Guid.NewGuid(), expedienteId, etiqueta, contenido, DateTime.Now, DateTime.Now, usuarioId)
     {    

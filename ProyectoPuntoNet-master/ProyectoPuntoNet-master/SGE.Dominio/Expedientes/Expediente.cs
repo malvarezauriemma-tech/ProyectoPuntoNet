@@ -34,6 +34,7 @@ public class Expediente
         Estado = estado;
     }
 
+    protected Expediente() {}
     // constructor publico para expedientes nuevos, usa del constructor privado
     public Expediente(Caratula caratula, Guid usuarioID): this(Guid.NewGuid(), caratula, DateTime.Now, DateTime.Now, usuarioID, EstadoExpediente.RecienIniciado)
     {
