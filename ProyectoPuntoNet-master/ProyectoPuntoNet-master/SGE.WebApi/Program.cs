@@ -1,3 +1,8 @@
+using System;
+using SGE.WebApi;
+
+namespace SGE.WebApi;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // 1. Extraemos la cadena de conexión
@@ -9,6 +14,7 @@ builder.Services.AddDbContext<SgeContext>(options =>
     options.UseSqlite(connectionString));
 
 // Aquí irán los registros de tus Repositorios y Casos de Uso más adelante...
+builder.Services.AddScoped<ITokenProvider, JwtTokenProvider>();
 
 var app = builder.Build();
 
