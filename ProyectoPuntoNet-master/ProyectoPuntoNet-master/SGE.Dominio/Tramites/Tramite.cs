@@ -19,12 +19,8 @@ public class Tramite
     public Guid UsuarioUltimoCambio { get; private set; }
 
     // constructor privado para reconstruccion
-    private Tramite(Guid id, Guid expedienteId, EtiquetaTramite etiqueta, ContenidoTramite contenido, DateTime fechaCreacion, DateTime fechaModif, Guid usuarioId)
+    public Tramite(Guid expedienteId, EtiquetaTramite etiqueta, ContenidoTramite contenido, DateTime fechaCreacion, DateTime fechaModif, Guid usuarioId)
     {
-        if (id == Guid.Empty)
-        {
-            throw new DominioException("ID inválido");
-        }
         if (expedienteId == Guid.Empty)
         {
             throw new DominioException("ExpedienteID obligatorio");
@@ -38,7 +34,7 @@ public class Tramite
             throw new DominioException("Fecha de modificacion inválida");
         }
 
-        Id = id;
+        Id = Guid.NewGuid();
         ExpedienteId = expedienteId;
         Etiqueta = etiqueta;
         Contenido = contenido ?? throw new DominioException("El contenido es obligatorio");
@@ -48,10 +44,6 @@ public class Tramite
     }
 
     protected Tramite() {}
-    // constructor publico (usa el privado)
-    public Tramite(Guid expedienteId, EtiquetaTramite etiqueta, ContenidoTramite contenido, Guid usuarioId): this(Guid.NewGuid(), expedienteId, etiqueta, contenido, DateTime.Now, DateTime.Now, usuarioId)
-    {    
-    }
 
     // Factory method para reconstruccion, lo usa repositorio txt 
     public static Tramite Reconstruir(Guid id, Guid expedienteId, EtiquetaTramite etiqueta, ContenidoTramite contenido, DateTime fechaCreacion, DateTime fechaModif, Guid usuarioId)
