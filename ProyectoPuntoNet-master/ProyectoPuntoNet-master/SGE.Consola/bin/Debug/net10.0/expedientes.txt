@@ -1,9 +1,0 @@
-c309aa64-6b4e-4ee8-a72e-3f0892206d27;Expediente de prueba;18/5/2026 10:35:39;18/5/2026 10:35:39;8d7d08a4-6f0d-4cdb-9a90-8b0a6af1c5df;ConResolucion
-0888cbc1-4376-4ac7-a6f5-d458c07f2906;Expediente de prueba;18/5/2026 13:34:42;18/5/2026 13:34:42;11268d4e-186c-4b69-8e19-b6c9d95ff986;RecienIniciado
-75683275-d921-4661-bf5f-c06b03458ee1;Expediente de prueba;18/5/2026 13:38:29;18/5/2026 13:38:29;8a4e88e1-0ad6-4570-a6eb-64fc65acdfdf;RecienIniciado
-0e9edb05-222f-4984-b82d-a20b29fbf316;Expediente de prueba;18/5/2026 13:49:11;18/5/2026 13:49:11;c2dffcac-6eed-44fd-a36b-0dfd353e5c38;RecienIniciado
-b91de754-3af1-4b16-a8ea-5c37189eeade;Expediente de prueba;18/5/2026 13:55:39;18/5/2026 13:55:39;eb25f373-2ccb-4aa8-b1d7-18d1bdbfe0c4;RecienIniciado
-f418f9b0-f701-497b-9fb8-4d6d4ade1035;Expediente de prueba;18/5/2026 14:17:38;18/5/2026 14:17:38;ba7ff99d-5e64-44a9-8027-4ed5942b427b;RecienIniciado
-9063038b-1b22-4bbb-a2f0-a272cc8ae05b;Expediente de Prueba;18/5/2026 14:17:38;18/5/2026 14:17:38;5733c227-b8d0-484d-ac26-7bee7624b827;RecienIniciado
-2ee979e0-2a12-4777-88e9-7bc3a7e63648;Expediente de prueba;18/5/2026 18:58:02;18/5/2026 18:58:02;48d361f4-8c30-44e4-aa45-e06cd82f3ef1;RecienIniciado
-6dad837d-8bab-498f-bb92-2e14088b5a8b;Expediente de Prueba;18/5/2026 18:58:02;18/5/2026 18:58:02;f11710b6-128c-468a-b33d-65049792b083;RecienIniciado
