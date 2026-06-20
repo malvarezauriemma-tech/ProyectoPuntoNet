@@ -45,12 +45,6 @@ public class Tramite
 
     protected Tramite() {}
 
-    // Factory method para reconstruccion, lo usa repositorio txt 
-    public static Tramite Reconstruir(Guid id, Guid expedienteId, EtiquetaTramite etiqueta, ContenidoTramite contenido, DateTime fechaCreacion, DateTime fechaModif, Guid usuarioId)
-    {
-        return new Tramite(id, expedienteId, etiqueta, contenido, fechaCreacion, fechaModif, usuarioId);
-    }
-
     // metodo para poder modificar el contenido con los casos de uso 
     public void Modificar(EtiquetaTramite nuevaEtiqueta, ContenidoTramite nuevoContenido, Guid usuarioId)
     {

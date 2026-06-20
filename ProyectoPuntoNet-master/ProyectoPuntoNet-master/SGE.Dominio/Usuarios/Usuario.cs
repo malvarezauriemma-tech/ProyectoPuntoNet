@@ -31,7 +31,7 @@ public class Usuario
 
     protected Usuario() {} // constructor protegido para la Entity Framework
 
-    // preguntar: "el dominio debe proveer métodos públicos para gestionar la asignación de permisos de forma segura"
+    // metodos publicos para gestionar la asignacion de permisos
     public void AsignarPermiso(Permiso permiso)
     {
         if (!_permisos.Contains(permiso))
@@ -46,6 +46,20 @@ public class Usuario
         {
             _permisos.Remove(permiso);
         }
+    }
+
+    // método para actualizar los datos del usuario con los casos de uso
+    public void ActualizarDatos(string nombre, string contrasenaHash)
+    {
+        if (string.IsNullOrWhiteSpace(nombre)) {
+            throw new DominioException("El nombre es obligatorio.");
+        }
+        if (string.IsNullOrWhiteSpace(contrasenaHash)) {
+            throw new DominioException("La contraseña es obligatoria.");
+        }
+
+        Nombre = nombre;
+        ContrasenaHash = contrasenaHash;
     }
 
 }

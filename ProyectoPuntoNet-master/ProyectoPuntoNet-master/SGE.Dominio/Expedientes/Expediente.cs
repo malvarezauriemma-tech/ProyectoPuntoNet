@@ -32,12 +32,6 @@ public class Expediente
 
     protected Expediente() {}
 
-    // metodo publico para usar la capa de infraestructura para reconstruir 
-    public static Expediente Reconstruir(Guid id, Caratula caratula, DateTime fechaCreacion, DateTime fechaUltMod, Guid usuarioID, EstadoExpediente estado)
-    {
-        return new Expediente(id, caratula, fechaCreacion, fechaUltMod, usuarioID, estado);
-    }
-
     // modificar caratula: usuario cometio error al ingresar el expediente y debe corregirla. Actualiza el dato
     // , el usuario responsable y la fecha de modificación
     public void ModificarCaratula(Caratula nuevaCaratula, Guid idUsuario)
