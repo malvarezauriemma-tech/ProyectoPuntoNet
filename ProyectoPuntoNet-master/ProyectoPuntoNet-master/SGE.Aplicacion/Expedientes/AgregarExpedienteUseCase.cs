@@ -1,12 +1,11 @@
-using System;
-using SGE.Aplicacion.Expedientes;
 using SGE.Dominio.Expedientes;
-using SGE.Aplicacion.Excepcion;
 using SGE.Aplicacion.Autorizacion;
+using SGE.Dominio.Usuarios;
+using SGE.Aplicacion.Abstracciones;
 
 namespace SGE.Aplicacion.Expedientes;
 
-public class AgregarExpedienteUseCase(IExpedienteRepository respositorio, IAutorizacionService autorizacionService)
+public class AgregarExpedienteUseCase(IExpedienteRepository respositorio, IAutorizacionService autorizacionService, IUnidadDeTrabajo unidadDeTrabajo)
 {
     public AgregarExpedienteResponse Ejecutar(AgregarExpedienteRequest request)
     {
@@ -21,6 +20,7 @@ public class AgregarExpedienteUseCase(IExpedienteRepository respositorio, IAutor
         // creo entidad
         var expediente = new Expediente(caratula, request.usuarioID);
         respositorio.Agregar(expediente);
+        unidadDeTrabajo.Guardar();
 
         return new AgregarExpedienteResponse(expediente.Id);
     }

@@ -12,22 +12,18 @@ public class Expediente
     public EstadoExpediente Estado {get; private set;} // enumerativo
 
     // constructor privado para la reconstruccion
-    public Expediente(Caratula caratula, DateTime fechaCreacion, DateTime fechaUltMod, Guid usuarioID, EstadoExpediente estado)
+    public Expediente(Caratula caratula, Guid usuarioID)
     {
         if (usuarioID == Guid.Empty)
         {
             throw new DominioException("El usuario es obligatorio");
         }
-        if (fechaUltMod < fechaCreacion)
-        {
-            throw new DominioException("La fecha de modificación es incoherente");
-        }
         Id = Guid.NewGuid();
         Caratula = caratula ?? throw new DominioException("La caratula es obligatoria");
-        FechaCreacion = fechaCreacion;
-        FechaUltimaModificacion = fechaUltMod;
+        FechaCreacion = DateTime.Now;
+        FechaUltimaModificacion = FechaCreacion;
         UsuarioUltimoCambio = usuarioID;
-        Estado = estado;
+        Estado = EstadoExpediente.RecienIniciado;
     }
 
     protected Expediente() {}
