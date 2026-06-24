@@ -6,9 +6,11 @@ using SGE.Aplicacion.Excepcion;
 using SGE.Aplicacion.Tramites;
 using SGE.Aplicacion.Autorizacion;
 using SGE.Dominio.Tramites;
+using SGE.Dominio.Usuarios;
+using SGE.Aplicacion.Abstracciones;
 
 public class EliminarExpedienteUseCase(IExpedienteRepository expedienteRepo, ITramiteRepository tramiteRepo, 
-    IAutorizacionService autorizacionService)
+    IAutorizacionService autorizacionService, IUnidadDeTrabajo unidadDeTrabajo)
 {
     public EliminarExpedienteResponse Ejecutar(EliminarExpedienteRequest request)
     {
@@ -27,6 +29,8 @@ public class EliminarExpedienteUseCase(IExpedienteRepository expedienteRepo, ITr
 
         // 2: borro expediente
         expedienteRepo.Eliminar(request.ExpedienteId);
+        unidadDeTrabajo.Guardar();
+        
         return new EliminarExpedienteResponse();
     }
 }

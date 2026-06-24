@@ -2,12 +2,15 @@ using System;
 using SGE.Aplicacion.Excepcion;
 using SGE.Aplicacion.Autorizacion;
 using SGE.Dominio.Expedientes;
+using SGE.Dominio.Usuarios;
+using SGE.Aplicacion.Abstracciones;
 
 namespace SGE.Aplicacion.Expedientes;
 
 public class CambiarEstadoExpedienteUseCase(
     IExpedienteRepository repositorio, 
-    IAutorizacionService autorizacionService)
+    IAutorizacionService autorizacionService,
+    IUnidadDeTrabajo unidadDeTrabajo)
 {
     public CambiarEstadoExpedienteResponse Ejecutar(CambiarEstadoExpedienteRequest request)
     {
@@ -29,7 +32,7 @@ public class CambiarEstadoExpedienteUseCase(
         expediente.CambiarEstado(request.NuevoEstado, request.UsuarioId);
 
         // 4. Persistir los cambios
-        repositorio.Modificar(expediente);
+        unidadDeTrabajo.Guardar();
 
         return new CambiarEstadoExpedienteResponse();
     }
