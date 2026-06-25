@@ -841,19 +841,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\malva\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\malva\\Alvarez_Cocuzza_Trabajo1\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.WebApi\\SGE.WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Nueva carpeta\\ProyectoPuntoNet\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.WebApi\\SGE.WebApi.csproj",
       "projectName": "SGE.WebApi",
-      "projectPath": "C:\\Users\\malva\\Alvarez_Cocuzza_Trabajo1\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.WebApi\\SGE.WebApi.csproj",
-      "packagesPath": "C:\\Users\\malva\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\malva\\Alvarez_Cocuzza_Trabajo1\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.WebApi\\obj\\",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\Nueva carpeta\\ProyectoPuntoNet\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.WebApi\\SGE.WebApi.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Admin\\Desktop\\Nueva carpeta\\ProyectoPuntoNet\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\malva\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
@@ -865,8 +865,8 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\malva\\Alvarez_Cocuzza_Trabajo1\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Aplicacion\\SGE.Aplicacion.csproj": {
-              "projectPath": "C:\\Users\\malva\\Alvarez_Cocuzza_Trabajo1\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Aplicacion\\SGE.Aplicacion.csproj"
+            "C:\\Users\\Admin\\Desktop\\Nueva carpeta\\ProyectoPuntoNet\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Aplicacion\\SGE.Aplicacion.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Desktop\\Nueva carpeta\\ProyectoPuntoNet\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Aplicacion\\SGE.Aplicacion.csproj"
             }
           }
         }
@@ -881,7 +881,7 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.100"
+      "SdkAnalysisLevel": "10.0.200"
     },
     "frameworks": {
       "net10.0": {
@@ -915,7 +915,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
@@ -1332,5 +1332,17 @@
         }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"SQLitePCLRaw.lib.e_sqlite3\" 2.1.11 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-2m69-gcr7-jv3q",
+      "libraryId": "SQLitePCLRaw.lib.e_sqlite3",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
 }

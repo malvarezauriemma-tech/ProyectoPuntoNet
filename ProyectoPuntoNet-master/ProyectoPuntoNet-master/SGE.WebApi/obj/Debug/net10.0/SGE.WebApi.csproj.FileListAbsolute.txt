@@ -1,0 +1,8 @@
+C:\Users\Admin\Desktop\Nueva carpeta\ProyectoPuntoNet\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.WebApi\obj\Debug\net10.0\SGE.WebApi.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Nueva carpeta\ProyectoPuntoNet\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.WebApi\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\Users\Admin\Desktop\Nueva carpeta\ProyectoPuntoNet\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.WebApi\obj\Debug\net10.0\SGE.WebApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Nueva carpeta\ProyectoPuntoNet\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.WebApi\obj\Debug\net10.0\SGE.WebApi.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Nueva carpeta\ProyectoPuntoNet\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.WebApi\obj\Debug\net10.0\SGE.WebApi.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Nueva carpeta\ProyectoPuntoNet\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.WebApi\obj\Debug\net10.0\SGE.WebApi.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Nueva carpeta\ProyectoPuntoNet\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.WebApi\obj\Debug\net10.0\SGE.WebApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Admin\Desktop\Nueva carpeta\ProyectoPuntoNet\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.WebApi\obj\Debug\net10.0\SGE.WebApi.sourcelink.json

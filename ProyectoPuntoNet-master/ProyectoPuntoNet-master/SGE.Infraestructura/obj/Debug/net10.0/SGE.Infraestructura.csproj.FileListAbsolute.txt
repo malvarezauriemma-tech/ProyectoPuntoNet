@@ -16,3 +16,12 @@ C:\Users\malva\SGE\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Infraestr
 C:\Users\malva\SGE\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Infraestructura\obj\Debug\net10.0\refint\SGE.Infraestructura.dll
 C:\Users\malva\SGE\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Infraestructura\obj\Debug\net10.0\SGE.Infraestructura.pdb
 C:\Users\malva\SGE\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Infraestructura\obj\Debug\net10.0\ref\SGE.Infraestructura.dll
+C:\Users\Admin\Desktop\Nueva carpeta\ProyectoPuntonet\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.infraestructura\obj\Debug\net10.0\SGE.Infraestructura.dll
+C:\Users\Admin\Desktop\Nueva carpeta\ProyectoPuntonet\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.infraestructura\obj\Debug\net10.0\refint\SGE.Infraestructura.dll
+C:\Users\Admin\Desktop\Nueva carpeta\ProyectoPuntonet\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.infraestructura\obj\Debug\net10.0\SGE.Infraestructura.pdb
+C:\Users\Admin\Desktop\Nueva carpeta\ProyectoPuntonet\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.infraestructura\obj\Debug\net10.0\SGE.Infraestructura.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Nueva carpeta\ProyectoPuntonet\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.infraestructura\obj\Debug\net10.0\SGE.Infraestructura.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Nueva carpeta\ProyectoPuntonet\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.infraestructura\obj\Debug\net10.0\SGE.Infraestructura.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Nueva carpeta\ProyectoPuntonet\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.infraestructura\obj\Debug\net10.0\SGE.Infraestructura.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Nueva carpeta\ProyectoPuntonet\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.infraestructura\obj\Debug\net10.0\SGE.Infraestructura.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Nueva carpeta\ProyectoPuntonet\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.infraestructura\obj\Debug\net10.0\SGE.Infraestructura.sourcelink.json

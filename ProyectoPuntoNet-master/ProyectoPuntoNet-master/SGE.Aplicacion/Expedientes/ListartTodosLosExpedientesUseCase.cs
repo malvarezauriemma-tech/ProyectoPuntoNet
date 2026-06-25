@@ -11,7 +11,6 @@ public class ListarTodosLosExpedientesUseCase(IExpedienteRepository repo)
 
         // mapeo de las entidades a los DTO
         var dtos = expedientes.Select(e => new ExpedienteDTO(e.Id, e.Caratula.Valor, e.Estado.ToString(), e.FechaCreacion)).ToList();
-        unidadDeTrabajo.Guardar();
 
         return new ListarTodosLosExpedientesResponse(dtos);
     }
