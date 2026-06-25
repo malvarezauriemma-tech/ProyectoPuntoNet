@@ -1,14 +1,14 @@
-using System;
 using SGE.Aplicacion.Autorizacion;
 using SGE.Aplicacion.Expedientes;
 using SGE.Aplicacion.Tramites;
 using SGE.Aplicacion.Excepcion;
 using SGE.Dominio.Tramites;
-using SGE.Aplicacion;
+using SGE.Dominio.Usuarios;
+using SGE.Aplicacion.Abstracciones;
 
 namespace SGE.Aplicacion.Tramites;
 
-public class AgregarTramiteUseCase(ITramiteRepository tramiteRepo, IExpedienteRepository expedienteRepository, IAutorizacionService autorizacionService, ActualizacionEstadoExpedienteService estadoService)
+public class AgregarTramiteUseCase(ITramiteRepository tramiteRepo, IExpedienteRepository expedienteRepository, IAutorizacionService autorizacionService, ActualizacionEstadoExpedienteService estadoService, IUnidadDeTrabajo uow)
 {
     public AgregarTramiteResponse Ejecutar(AgregarTramiteRequest request)
     {
@@ -34,6 +34,9 @@ public class AgregarTramiteUseCase(ITramiteRepository tramiteRepo, IExpedienteRe
 
         // actualizar estado del expediente:
         estadoService.Ejecutar(request.ExpedienteId, request.UsuarioId);
+
+        // confirmar todo en SQLite
+        uow.Guardar();
 
         return new AgregarTramiteResponse(tramite.Id);
     }

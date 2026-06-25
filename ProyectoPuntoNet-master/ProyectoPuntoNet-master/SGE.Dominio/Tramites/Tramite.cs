@@ -19,7 +19,7 @@ public class Tramite
     public Guid UsuarioUltimoCambio { get; private set; }
 
     // constructor privado para reconstruccion
-    public Tramite(Guid expedienteId, EtiquetaTramite etiqueta, ContenidoTramite contenido, DateTime fechaCreacion, DateTime fechaModif, Guid usuarioId)
+    public Tramite(Guid expedienteId, EtiquetaTramite etiqueta, ContenidoTramite contenido, Guid usuarioId)
     {
         if (expedienteId == Guid.Empty)
         {
@@ -29,17 +29,13 @@ public class Tramite
         {
             throw new DominioException("Usuario obligatorio");
         }
-        if (fechaModif < fechaCreacion)
-        {
-            throw new DominioException("Fecha de modificacion inválida");
-        }
 
         Id = Guid.NewGuid();
         ExpedienteId = expedienteId;
         Etiqueta = etiqueta;
         Contenido = contenido ?? throw new DominioException("El contenido es obligatorio");
-        FechaCreacion = fechaCreacion;
-        FechaUltimaModificacion = fechaModif;
+        FechaCreacion = DateTime.Now;
+        FechaUltimaModificacion = FechaCreacion;
         UsuarioUltimoCambio = usuarioId;
     }
 

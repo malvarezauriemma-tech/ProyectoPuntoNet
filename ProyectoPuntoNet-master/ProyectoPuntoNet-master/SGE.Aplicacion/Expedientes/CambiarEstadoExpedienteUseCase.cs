@@ -10,7 +10,7 @@ namespace SGE.Aplicacion.Expedientes;
 public class CambiarEstadoExpedienteUseCase(
     IExpedienteRepository repositorio, 
     IAutorizacionService autorizacionService,
-    IUnidadDeTrabajo unidadDeTrabajo)
+    IUnidadDeTrabajo uow)
 {
     public CambiarEstadoExpedienteResponse Ejecutar(CambiarEstadoExpedienteRequest request)
     {
@@ -32,7 +32,7 @@ public class CambiarEstadoExpedienteUseCase(
         expediente.CambiarEstado(request.NuevoEstado, request.UsuarioId);
 
         // 4. Persistir los cambios
-        unidadDeTrabajo.Guardar();
+        uow.Guardar();
 
         return new CambiarEstadoExpedienteResponse();
     }

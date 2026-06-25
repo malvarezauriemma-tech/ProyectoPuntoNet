@@ -3,8 +3,10 @@ namespace SGE.Aplicacion.Tramites;
 using SGE.Aplicacion.Expedientes;
 using SGE.Aplicacion.Autorizacion;
 using SGE.Aplicacion.Excepcion;
+using SGE.Aplicacion.Abstracciones;
+using SGE.Dominio.Usuarios;
 
-public class EliminarTramiteUseCase(ITramiteRepository tramiteRepo, IAutorizacionService autorizacionService, ActualizacionEstadoExpedienteService actualizadorEstado)
+public class EliminarTramiteUseCase(ITramiteRepository tramiteRepo, IAutorizacionService autorizacionService, ActualizacionEstadoExpedienteService actualizadorEstado, IUnidadDeTrabajo uow)
 {
     public EliminarTramiteResponse Ejecutar(EliminarTramiteRequest request)
     {
@@ -26,6 +28,8 @@ public class EliminarTramiteUseCase(ITramiteRepository tramiteRepo, IAutorizacio
 
         // le pido al servicio que actualice el estado del expediente cosa de que, si no quedan tramites, lo ponga en RecienIniciado 
         actualizadorEstado.Ejecutar(expedienteId, request.UsuarioId);
+
+        uow.Guardar();
 
         return new EliminarTramiteResponse();
     }

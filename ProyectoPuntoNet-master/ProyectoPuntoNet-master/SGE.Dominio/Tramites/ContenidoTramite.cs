@@ -4,7 +4,7 @@ namespace SGE.Dominio.Tramites;
 
 public record ContenidoTramite
 {
-    public string Texto { get; }
+    public string Valor { get; }
 
     public ContenidoTramite(string texto)
     {
@@ -13,6 +13,6 @@ public record ContenidoTramite
             throw new DominioException("El contenido del trámite no puede estar vacío");
         }
 
-        Texto = texto;
+        Valor = texto;
     }
 }

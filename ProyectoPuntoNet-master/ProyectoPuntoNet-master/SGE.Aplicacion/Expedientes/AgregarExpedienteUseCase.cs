@@ -5,7 +5,7 @@ using SGE.Aplicacion.Abstracciones;
 
 namespace SGE.Aplicacion.Expedientes;
 
-public class AgregarExpedienteUseCase(IExpedienteRepository repositorio, IAutorizacionService autorizacionService, IUnidadDeTrabajo unidadDeTrabajo)
+public class AgregarExpedienteUseCase(IExpedienteRepository repositorio, IAutorizacionService autorizacionService, IUnidadDeTrabajo uow)
 {
     public AgregarExpedienteResponse Ejecutar(AgregarExpedienteRequest request)
     {
@@ -20,7 +20,7 @@ public class AgregarExpedienteUseCase(IExpedienteRepository repositorio, IAutori
         // creo entidad
         var expediente = new Expediente(caratula, request.usuarioID);
         repositorio.Agregar(expediente);
-        unidadDeTrabajo.Guardar();
+        uow.Guardar();
 
         return new AgregarExpedienteResponse(expediente.Id);
     }

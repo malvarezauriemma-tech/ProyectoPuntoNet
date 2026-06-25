@@ -1,4 +1,5 @@
 using System.Net.Cache;
+using SGE.Aplicacion.Abstracciones;
 using SGE.Aplicacion.Autorizacion;
 using SGE.Aplicacion.Excepcion;
 using SGE.Aplicacion.Expedientes;
@@ -7,7 +8,7 @@ using SGE.Dominio.Usuarios;
 
 namespace SGE.Aplicacion.Tramites;
 
-public class ModificarTramiteUseCase(ITramiteRepository tramiteRepo, IAutorizacionService autorizacionService, ActualizacionEstadoExpedienteService estadoService)
+public class ModificarTramiteUseCase(ITramiteRepository tramiteRepo, IAutorizacionService autorizacionService, ActualizacionEstadoExpedienteService estadoService, IUnidadDeTrabajo uow)
 {
     public ModificarTramiteResponse Ejecutar(ModificarTramiteRequest request) {
         if (!autorizacionService.PoseeElPermiso(request.UsuarioId, Permiso.TramiteModificacion)) {
@@ -23,11 +24,11 @@ public class ModificarTramiteUseCase(ITramiteRepository tramiteRepo, IAutorizaci
         var contenido = new ContenidoTramite(request.nuevoContenido);
         tramite.Modificar(request.NuevaEtiqueta, contenido, request.UsuarioId);
 
-        // persistir cambios del tramite
-        tramiteRepo.Modificar(tramite);
 
         // actualizo estado expediente
         estadoService.Ejecutar(tramite.ExpedienteId, request.UsuarioId);
+
+        uow.Guardar();
 
         return new ModificarTramiteResponse();
     }

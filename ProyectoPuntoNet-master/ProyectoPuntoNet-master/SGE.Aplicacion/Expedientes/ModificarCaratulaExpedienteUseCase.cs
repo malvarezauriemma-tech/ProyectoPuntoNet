@@ -5,10 +5,13 @@ using SGE.Aplicacion.Autorizacion;
 using SGE.Dominio.Expedientes;
 using SGE.Aplicacion.Expedientes;
 using SGE.Aplicacion.Excepcion;
+using SGE.Dominio.Usuarios;
+using SGE.Aplicacion.Abstracciones;
 
 public class ModificarCaratulaExpedienteUseCase(
     IExpedienteRepository repositorio, 
-    IAutorizacionService autorizacionService)
+    IAutorizacionService autorizacionService,
+    IUnidadDeTrabajo uow)
 {
     public ModificarCaratulaResponse Ejecutar(ModificarCaratulaRequest request)
     {
@@ -33,8 +36,8 @@ public class ModificarCaratulaExpedienteUseCase(
         // llamar al método de comportamiento rico de la entidad 
         expediente.ModificarCaratula(nuevaCaratula, request.UsuarioId);
 
-        // persistir los cambios en el archivo .txt 
-        repositorio.Modificar(expediente);
+        // persistir los cambios 
+        uow.Guardar();
 
         return new ModificarCaratulaResponse();
     }
