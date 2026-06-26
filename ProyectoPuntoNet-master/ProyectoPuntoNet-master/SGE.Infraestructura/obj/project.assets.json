@@ -988,6 +988,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.9",
           "SGE.Dominio": "1.0.0"
         },
         "compile": {
@@ -2954,19 +2955,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\malva\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Nueva carpeta\\ProyectoPuntonet\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.infraestructura\\SGE.Infraestructura.csproj",
+      "projectUniqueName": "C:\\Users\\malva\\Alvarez_Cocuzza_Trabajo1\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Infraestructura\\SGE.Infraestructura.csproj",
       "projectName": "SGE.Infraestructura",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\Nueva carpeta\\ProyectoPuntonet\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.infraestructura\\SGE.Infraestructura.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\Nueva carpeta\\ProyectoPuntonet\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.infraestructura\\obj\\",
+      "projectPath": "C:\\Users\\malva\\Alvarez_Cocuzza_Trabajo1\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Infraestructura\\SGE.Infraestructura.csproj",
+      "packagesPath": "C:\\Users\\malva\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\malva\\Alvarez_Cocuzza_Trabajo1\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Infraestructura\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\malva\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
@@ -2978,11 +2979,11 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\Admin\\Desktop\\Nueva carpeta\\ProyectoPuntoNet\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Aplicacion\\SGE.Aplicacion.csproj": {
-              "projectPath": "C:\\Users\\Admin\\Desktop\\Nueva carpeta\\ProyectoPuntoNet\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Aplicacion\\SGE.Aplicacion.csproj"
+            "C:\\Users\\malva\\Alvarez_Cocuzza_Trabajo1\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Aplicacion\\SGE.Aplicacion.csproj": {
+              "projectPath": "C:\\Users\\malva\\Alvarez_Cocuzza_Trabajo1\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Aplicacion\\SGE.Aplicacion.csproj"
             },
-            "C:\\Users\\Admin\\Desktop\\Nueva carpeta\\ProyectoPuntonet\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Dominio\\SGE.Dominio.csproj": {
-              "projectPath": "C:\\Users\\Admin\\Desktop\\Nueva carpeta\\ProyectoPuntonet\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Dominio\\SGE.Dominio.csproj"
+            "C:\\Users\\malva\\Alvarez_Cocuzza_Trabajo1\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Dominio\\SGE.Dominio.csproj": {
+              "projectPath": "C:\\Users\\malva\\Alvarez_Cocuzza_Trabajo1\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.Dominio\\SGE.Dominio.csproj"
             }
           }
         }
@@ -2997,7 +2998,7 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.200"
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net10.0": {
@@ -3038,7 +3039,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -3321,7 +3322,7 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "El paquete \"SQLitePCLRaw.lib.e_sqlite3\" 2.1.11 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-2m69-gcr7-jv3q",
+      "message": "Package 'SQLitePCLRaw.lib.e_sqlite3' 2.1.11 has a known high severity vulnerability, https://github.com/advisories/GHSA-2m69-gcr7-jv3q",
       "libraryId": "SQLitePCLRaw.lib.e_sqlite3",
       "targetGraphs": [
         "net10.0"

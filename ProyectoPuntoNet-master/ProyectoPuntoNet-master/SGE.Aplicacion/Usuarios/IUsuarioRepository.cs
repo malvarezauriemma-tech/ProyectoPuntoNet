@@ -7,6 +7,6 @@ public interface IUsuarioRepository
     void Agregar(Usuario usuario);
     Usuario? ObtenerPorEmail(string email);
     Usuario? ObtenerPorId(Guid id);
-    List<Usuario> ObtenerTodos(); 
+    IEnumerable<Usuario> ObtenerTodos(); 
     void Eliminar(Guid id);
 }

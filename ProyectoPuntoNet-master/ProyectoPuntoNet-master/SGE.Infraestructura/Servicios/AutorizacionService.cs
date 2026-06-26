@@ -4,14 +4,11 @@ using SGE.Dominio.Usuarios;
 
 namespace SGE.Infraestructura.Servicios;
 
-public class AutorizacionService : IAutorizacionService
+public class AutorizacionService(IUsuarioRepository repo) : IAutorizacionService
 {
-    private readonly IUsuarioRepository _repo;
-    public AutorizacionService(IUsuarioRepository repo) => _repo = repo;
-
     public bool PoseeElPermiso(Guid idUsuario, Permiso permisoRequerido)
     {
-        var usuario = _repo.ObtenerPorId(idUsuario);
+        var usuario = repo.ObtenerPorId(idUsuario);
         if (usuario == null) return false;
         if (usuario.EsAdministrador) return true;
 

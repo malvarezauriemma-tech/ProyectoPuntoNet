@@ -5,19 +5,17 @@ using SGE.Aplicacion.Excepcion;
 
 namespace SGE.Infraestructura.Repositorios;
 
-public class UsuarioRepository : IUsuarioRepository
+public class UsuarioRepository(SgeContext context) : IUsuarioRepository
 {
-    private readonly SgeContext _context;
-    public UsuarioRepository(SgeContext context) => _context = context;
-
-    public void Agregar(Usuario u) => _context.Usuarios.Add(u);
-    public Usuario? ObtenerPorId(Guid id) => _context.Usuarios.Find(id);
-    public Usuario? ObtenerPorEmail(string email) => _context.Usuarios.FirstOrDefault(u => u.CorreoElectronico == email);
-    public List<Usuario> ObtenerTodos() => _context.Usuarios.ToList();
+    public void Agregar(Usuario u) => context.Usuarios.Add(u);
+    public Usuario? ObtenerPorId(Guid id) => context.Usuarios.Find(id);
+    public Usuario? ObtenerPorEmail(string email) => context.Usuarios.FirstOrDefault(u => u.CorreoElectronico == email);
+    public IEnumerable<Usuario> ObtenerTodos() => context.Usuarios;
     public void Eliminar(Guid id)
     {
-        var u = _context.Usuarios.Find(id) ?? throw new RepositorioException("No existe");
-        _context.Usuarios.Remove(u);
+        var u = context.Usuarios.Find(id) ?? throw new RepositorioException("No existe el usuario");
+        context.Usuarios.Remove(u);
     }
    
+   public void Modificar(Usuario usuario) {} // para rastrear cambios en permisos o datos
 }

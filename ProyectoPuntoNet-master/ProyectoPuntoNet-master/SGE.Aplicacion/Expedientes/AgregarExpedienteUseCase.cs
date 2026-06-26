@@ -10,15 +10,15 @@ public class AgregarExpedienteUseCase(IExpedienteRepository repositorio, IAutori
     public AgregarExpedienteResponse Ejecutar(AgregarExpedienteRequest request)
     {
         // control de acceso
-        if (!autorizacionService.PoseeElPermiso(request.usuarioID, Permiso.ExpedienteAlta))
+        if (!autorizacionService.PoseeElPermiso(request.UsuarioID, Permiso.ExpedienteAlta))
         {
             throw new AutorizacionException("Usuario no autorizado para crear expedientes");
         }
 
         // creo caratula nueva
-        var caratula = new Caratula(request.caratula);
+        var caratula = new Caratula(request.Caratula);
         // creo entidad
-        var expediente = new Expediente(caratula, request.usuarioID);
+        var expediente = new Expediente(caratula, request.UsuarioID);
         repositorio.Agregar(expediente);
         uow.Guardar();
 

@@ -1,30 +1,36 @@
 using System;
 using SGE.WebApi;
-
-namespace SGE.WebApi;
+using SGE.Aplicacion;
+using SGE.Infraestructura;
+using Scalar.AspNetCore;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 1. Extraemos la cadena de conexión
-var connectionString = builder.Configuration.GetConnectionString("SgeDb");
+// registro de servicios
+builder.Services.AddOpenApi()
+    .AddAplicacion() // registra use cases
+    .AddInfraestructura(builder.Configuration)
+    .AddSeguridadJwt(builder.Configuration); // registro de token provider y jwt
+builder.Services.AddProblemDetails(); // requerido para el manejador de errores
+builder.Services.AddExceptionHandler<ManejadorDeExcepcionesGlobales>();
 
-// 2. Configuramos Entity Framework para usar SQLite
-// (Para esto instalamos el paquete Microsoft.EntityFrameworkCore.Sqlite)
-builder.Services.AddDbContext<SgeContext>(options => 
-    options.UseSqlite(connectionString));
-
-// Aquí irán los registros de tus Repositorios y Casos de Uso más adelante...
-builder.Services.AddScoped<ITokenProvider, JwtTokenProvider>();
 
 var app = builder.Build();
 
-// Antes de los endpoints, configuramos los "peajes" o filtros
-app.UseExceptionHandler(); // Atrapa errores automáticamente [5]
-app.UseAuthentication();   // Verifica quién es el usuario [6]
-app.UseAuthorization();    // Verifica qué permisos tiene [6]
+// configuracion del pipeline (middlewares)
+app.UseExceptionHandler();
 
-app.MapGet("/", () => "¡La API del Sistema de Gestión de Expedientes está funcionando!");
+if (app.Environment.IsDevelopment())
+{
+    app.MapOpenApi();
+    app.MapScalarApiReference(); // documentación interactica en scalar
+}
 
-// Ejemplo de un endpoint para listar expedientes
-app.MapGet("/api/expedientes", (ListarExpedientesUseCase useCase) => 
-    Results.Ok(useCase.Ejecutar()));
+// mapeo de rutas
+app.MapGet("/", () => "SGE API Funcionando");
+app.MapExpedientesEndpoints();
+// app.MapTramitesEndpoints();
+// app.MapUsuariosEndpoints();
+
+app.Run();
