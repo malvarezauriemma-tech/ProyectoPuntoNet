@@ -4,6 +4,7 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
 using SGE.Aplicacion.Usuarios;
 
+namespace SGE.WebApi.Endpoints;
 
 public static class ExpedientesEndpoints
 {

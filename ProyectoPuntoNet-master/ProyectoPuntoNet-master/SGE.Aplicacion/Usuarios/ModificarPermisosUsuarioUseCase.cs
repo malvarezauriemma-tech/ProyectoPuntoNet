@@ -10,14 +10,14 @@ public class ModificarPermisosUsuarioUseCase(IUsuarioRepository repositorio, IUn
     public ModificarPermisosUsuarioResponse Ejecutar(ModificarPermisosUsuarioRequest request)
     {
         // valido que quien ejecuta sea un administrador
-        var admin = repositorio.ObtenerPorId(request.IdAdmin);
+        var admin = repositorio.ObtenerPorId(request.IdEjecutor);
         if (admin == null || !admin.EsAdministrador)
         {
             throw new AutorizacionException("Solo los administradores pueden modificar los permisos de los usuarios.");
         }
 
         // busco al usuario al que le quiero cambiar los permisos
-        var usuarioObjetivo = repositorio.ObtenerPorId(request.IdUsuarioObjetivo);
+        var usuarioObjetivo = repositorio.ObtenerPorId(request.UsuarioId);
         if (usuarioObjetivo == null)
         {
             throw new EntidadNoEncontradaException("Usuario objetivo no encontrado");

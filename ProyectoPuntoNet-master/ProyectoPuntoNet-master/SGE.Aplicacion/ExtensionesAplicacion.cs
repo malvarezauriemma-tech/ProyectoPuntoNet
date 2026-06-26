@@ -10,7 +10,8 @@ public static class ExtensionesAplicacion
 {
     public static IServiceCollection AddAplicacion(this IServiceCollection services)
     {
-        // Acá registramos cada Caso de Uso para que la API pueda "pedirlos"
+        // registramos cada caso de uso para que la API pueda "pedirlos"
+        // casos de uso expedientes
         services.AddScoped<AgregarExpedienteUseCase>();
         services.AddScoped<ListarTodosLosExpedientesUseCase>();
         services.AddScoped<ObtenerExpedientePorIdUseCase>();
@@ -18,12 +19,16 @@ public static class ExtensionesAplicacion
         services.AddScoped<EliminarExpedienteUseCase>();
         services.AddScoped<CambiarEstadoExpedienteUseCase>();
         
-        // ... y así con los de trámites y usuarios ...
+        // servicios de aplicacion
+        services.AddScoped<ActualizacionEstadoExpedienteService>();
+
+        // casos de uso tramites
         services.AddScoped<AgregarTramiteUseCase>();
         services.AddScoped<EliminarTramiteUseCase>();
         services.AddScoped<ListarTramitesPorExpedienteUseCase>();
         services.AddScoped<ModificarTramiteUseCase>();
 
+        // casos de uso usuarios
         services.AddScoped<EliminarUsuarioUseCase>();
         services.AddScoped<ListarUsuariosUseCase>();
         services.AddScoped<LoginUseCase>();

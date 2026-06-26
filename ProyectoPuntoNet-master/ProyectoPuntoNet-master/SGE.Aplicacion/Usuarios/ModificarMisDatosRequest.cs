@@ -2,4 +2,4 @@ using System;
 
 namespace SGE.Aplicacion.Usuarios;
 
-public record class ModificarMisDatosRequest(Guid IdUsuario, string nuevoNombre, string nuevaPassword);
+public record class ModificarMisDatosRequest(Guid Id = default, string nuevoNombre = "", string nuevaPassword = "");
