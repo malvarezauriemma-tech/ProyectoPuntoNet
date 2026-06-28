@@ -9,6 +9,7 @@ public class ModificarPermisosUsuarioUseCase(IUsuarioRepository repositorio, IUn
 {
     public ModificarPermisosUsuarioResponse Ejecutar(ModificarPermisosUsuarioRequest request)
     {
+        Console.WriteLine("entro");
         // valido que quien ejecuta sea un administrador
         var admin = repositorio.ObtenerPorId(request.IdEjecutor);
         if (admin == null || !admin.EsAdministrador)
@@ -31,6 +32,8 @@ public class ModificarPermisosUsuarioUseCase(IUsuarioRepository repositorio, IUn
         {
             usuarioObjetivo.QuitarPermiso(request.permiso);
         }
+
+        Console.WriteLine(usuarioObjetivo.Permisos.Count());
 
         unidadDeTrabajo.Guardar();
 

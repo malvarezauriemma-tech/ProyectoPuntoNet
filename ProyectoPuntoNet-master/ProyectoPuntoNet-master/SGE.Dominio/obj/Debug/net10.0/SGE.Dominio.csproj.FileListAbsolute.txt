@@ -22,3 +22,15 @@ C:\Users\Admin\Desktop\Nueva carpeta\ProyectoPuntonet\ProyectoPuntoNet-master\Pr
 C:\Users\Admin\Desktop\Nueva carpeta\ProyectoPuntonet\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Dominio\obj\Debug\net10.0\refint\SGE.Dominio.dll
 C:\Users\Admin\Desktop\Nueva carpeta\ProyectoPuntonet\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Dominio\obj\Debug\net10.0\SGE.Dominio.pdb
 C:\Users\Admin\Desktop\Nueva carpeta\ProyectoPuntonet\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Dominio\obj\Debug\net10.0\ref\SGE.Dominio.dll
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Dominio\bin\Debug\net10.0\SGE.Dominio.deps.json
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Dominio\bin\Debug\net10.0\SGE.Dominio.dll
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Dominio\bin\Debug\net10.0\SGE.Dominio.pdb
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Dominio\obj\Debug\net10.0\SGE.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Dominio\obj\Debug\net10.0\SGE.Dominio.AssemblyInfoInputs.cache
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Dominio\obj\Debug\net10.0\SGE.Dominio.AssemblyInfo.cs
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Dominio\obj\Debug\net10.0\SGE.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Dominio\obj\Debug\net10.0\SGE.Dominio.sourcelink.json
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Dominio\obj\Debug\net10.0\SGE.Dominio.dll
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Dominio\obj\Debug\net10.0\refint\SGE.Dominio.dll
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Dominio\obj\Debug\net10.0\SGE.Dominio.pdb
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Dominio\obj\Debug\net10.0\ref\SGE.Dominio.dll

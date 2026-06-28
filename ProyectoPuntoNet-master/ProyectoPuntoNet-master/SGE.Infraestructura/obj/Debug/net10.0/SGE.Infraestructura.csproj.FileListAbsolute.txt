@@ -25,3 +25,23 @@ C:\Users\Admin\Desktop\Nueva carpeta\ProyectoPuntonet\ProyectoPuntoNet-master\Pr
 C:\Users\Admin\Desktop\Nueva carpeta\ProyectoPuntonet\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.infraestructura\obj\Debug\net10.0\SGE.Infraestructura.AssemblyInfo.cs
 C:\Users\Admin\Desktop\Nueva carpeta\ProyectoPuntonet\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.infraestructura\obj\Debug\net10.0\SGE.Infraestructura.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Desktop\Nueva carpeta\ProyectoPuntonet\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.infraestructura\obj\Debug\net10.0\SGE.Infraestructura.sourcelink.json
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Infraestructura\bin\Debug\net10.0\SGE.Infraestructura.deps.json
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Infraestructura\bin\Debug\net10.0\SGE.Infraestructura.runtimeconfig.json
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Infraestructura\bin\Debug\net10.0\SGE.Infraestructura.dll
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Infraestructura\bin\Debug\net10.0\SGE.Infraestructura.pdb
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Infraestructura\bin\Debug\net10.0\SGE.Aplicacion.dll
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Infraestructura\bin\Debug\net10.0\SGE.Dominio.dll
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Infraestructura\bin\Debug\net10.0\SGE.Aplicacion.pdb
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Infraestructura\bin\Debug\net10.0\SGE.Dominio.pdb
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Infraestructura\obj\Debug\net10.0\SGE.Infraestructura.csproj.AssemblyReference.cache
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Infraestructura\obj\Debug\net10.0\SGE.Infraestructura.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Infraestructura\obj\Debug\net10.0\SGE.Infraestructura.AssemblyInfoInputs.cache
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Infraestructura\obj\Debug\net10.0\SGE.Infraestructura.AssemblyInfo.cs
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Infraestructura\obj\Debug\net10.0\SGE.Infraestructura.csproj.CoreCompileInputs.cache
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Infraestructura\obj\Debug\net10.0\SGE.Infraestructura.sourcelink.json
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Infraestructura\obj\Debug\net10.0\SGE.Infr.0FEB7F8C.Up2Date
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Infraestructura\obj\Debug\net10.0\SGE.Infraestructura.dll
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Infraestructura\obj\Debug\net10.0\refint\SGE.Infraestructura.dll
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Infraestructura\obj\Debug\net10.0\SGE.Infraestructura.pdb
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Infraestructura\obj\Debug\net10.0\SGE.Infraestructura.genruntimeconfig.cache
+C:\Users\malva\Alvarez_Cocuzza_Trabajo1\ProyectoPuntoNet-master\ProyectoPuntoNet-master\SGE.Infraestructura\obj\Debug\net10.0\ref\SGE.Infraestructura.dll

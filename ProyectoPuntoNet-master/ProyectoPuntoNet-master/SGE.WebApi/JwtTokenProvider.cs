@@ -21,7 +21,7 @@ public class JwtTokenProvider(IConfiguration config) : ITokenProvider
         var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
         // fabrico tokens
-        var token = new JwtSecurityToken(issuer: config["Jwt:Issuer"], audience: config["Jwt:Audicence"], claims: claims, expires: DateTime.UtcNow.AddHours(2), signingCredentials: creds);
+        var token = new JwtSecurityToken(issuer: config["Jwt:Issuer"], audience: config["Jwt:Audience"], claims: claims, expires: DateTime.UtcNow.AddHours(2), signingCredentials: creds);
 
         // lo convierto a string
         return new JwtSecurityTokenHandler().WriteToken(token);

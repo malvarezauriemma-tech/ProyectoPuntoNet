@@ -5,9 +5,9 @@ using SGE.Dominio.Comun;
 public class Usuario
 {
     public Guid Id {get ; private set;}
-    public string Nombre {get; private set;}
-    public string CorreoElectronico {get; private set;}
-    public string ContrasenaHash {get; private set;}
+    public string Nombre {get; private set;} = "";
+    public string CorreoElectronico {get; private set;} = "";
+    public string ContrasenaHash {get; private set;} = "";
     public bool EsAdministrador {get; private set;}
 
     // coleccion interna de permisos

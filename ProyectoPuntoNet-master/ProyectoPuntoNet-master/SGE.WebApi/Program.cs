@@ -6,6 +6,7 @@ using SGE.Infraestructura.Persistencia;
 using SGE.Infraestructura;
 using Scalar.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
+using SGE.Aplicacion.Abstracciones;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,7 +22,7 @@ builder.Services.AddExceptionHandler<ManejadorDeExcepcionesGlobales>();
 var app = builder.Build();
 
 // configuracion del pipeline (middlewares)
-app.UseExceptionHandler();
+ app.UseExceptionHandler();
 
 app.UseAuthentication(); // "descubre quién es" leyendo el token 
 app.UseAuthorization();  // "decide si tiene permiso" 
@@ -41,8 +42,9 @@ app.MapUsuariosEndpoints();
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<SgeContext>();
-    // Aquí llamamos a la clase que crea la base y carga los datos semilla [9]
-    SgeSqlite.Inicializar(context); 
+    var hashService = scope.ServiceProvider.GetRequiredService<IHashService>();
+    // aca llamo a la clase que crea la base y carga los datos semilla
+    SgeSqlite.Inicializar(context, hashService); 
 }
 
 app.Run();

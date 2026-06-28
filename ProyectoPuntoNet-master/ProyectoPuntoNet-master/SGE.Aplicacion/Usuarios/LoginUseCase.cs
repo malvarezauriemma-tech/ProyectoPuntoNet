@@ -6,7 +6,7 @@ using SGE.Aplicacion.Autorizacion;
 
 namespace SGE.Aplicacion.Usuarios;
 
-public class LoginUseCase(IUsuarioRepository repositorio, ITokenProvider tokenProvider)
+public class LoginUseCase(IUsuarioRepository repositorio, ITokenProvider tokenProvider, IHashService hashService)
 {
     public LoginResponse Ejecutar(LoginRequest request)
     {
@@ -14,7 +14,7 @@ public class LoginUseCase(IUsuarioRepository repositorio, ITokenProvider tokenPr
         var usuario = repositorio.ObtenerPorEmail(request.email);
 
         // recaulculo hash de contraseña ingresada, asi comparo
-        string hashIngresado = HashPassword(request.password);
+        string hashIngresado = hashService.ObtenerHash(request.password);
 
         if (usuario == null || usuario.ContrasenaHash != hashIngresado)
         {
@@ -25,13 +25,5 @@ public class LoginUseCase(IUsuarioRepository repositorio, ITokenProvider tokenPr
         var token = tokenProvider.GenerarToken(usuario);
 
         return new LoginResponse(token);
-    }
-
-    // metodo para garantizar que el hash sea identico
-    private string HashPassword(string password)
-    {
-        var bytes = Encoding.UTF8.GetBytes(password); // tomo contraseña que ingreso usuario, y lo traduce a una secuencia de bytes
-        var hash = SHA256.HashData(bytes);  // toma los bytes y les aplica una serie de operaciones matematicas y genera un resumen de longitud fija de 256 bits 
-        return Convert.ToHexString(hash); // convierte estos bytes recientes en una cadena de texto hexadecimal, asi el hash transforma un string legible que se asigna a la propiedad ContrasenaHash
     }
 }

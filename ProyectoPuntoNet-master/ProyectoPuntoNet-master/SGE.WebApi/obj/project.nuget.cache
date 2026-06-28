@@ -32,7 +32,7 @@
     {
       "code": "NU1903",
       "level": "Warning",
-      "message": "Package 'SQLitePCLRaw.lib.e_sqlite3' 2.1.11 has a known high severity vulnerability, https://github.com/advisories/GHSA-2m69-gcr7-jv3q",
+      "message": "El paquete \"SQLitePCLRaw.lib.e_sqlite3\" 2.1.11 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-2m69-gcr7-jv3q",
       "projectPath": "C:\\Users\\malva\\Alvarez_Cocuzza_Trabajo1\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.WebApi\\SGE.WebApi.csproj",
       "warningLevel": 1,
       "filePath": "C:\\Users\\malva\\Alvarez_Cocuzza_Trabajo1\\ProyectoPuntoNet-master\\ProyectoPuntoNet-master\\SGE.WebApi\\SGE.WebApi.csproj",

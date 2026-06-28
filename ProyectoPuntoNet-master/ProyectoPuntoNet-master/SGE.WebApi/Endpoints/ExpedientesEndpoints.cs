@@ -27,7 +27,7 @@ public static class ExpedientesEndpoints
         grupo.MapPost("/", (AgregarExpedienteRequest request, ClaimsPrincipal user, AgregarExpedienteUseCase useCase) => 
         {
              var idUsuario = ExtraerIdUsuario(user); // extraigo el ID del token
-             var response =  useCase.Ejecutar(request with {UsuarioID = idUsuario});
+             var response =  useCase.Ejecutar(request with {UsuarioId = idUsuario});
              return Results.Created($"/api/expedientes/{response.Id}", response); 
         }).RequireAuthorization();
 

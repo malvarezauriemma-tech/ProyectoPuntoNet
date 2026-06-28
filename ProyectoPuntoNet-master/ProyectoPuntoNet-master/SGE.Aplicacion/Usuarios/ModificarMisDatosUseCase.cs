@@ -5,19 +5,19 @@ using System.Text;
 
 namespace SGE.Aplicacion.Usuarios;
 
-public class ModificarMisDatosUseCase(IUsuarioRepository repositorio, IUnidadDeTrabajo unidadDeTrabajo)
+public class ModificarMisDatosUseCase(IUsuarioRepository repositorio, IUnidadDeTrabajo unidadDeTrabajo, IHashService hashService)
 {
     public ModificarMisDatosResponse Ejecutar(ModificarMisDatosRequest request)
     {
         // busco el usuario en kla base de datos por el ID que viene del token
-        var usuario = repositorio.ObtenerPorId(request.IdUsuario);
+        var usuario = repositorio.ObtenerPorId(request.Id);
         if (usuario == null)
         {
             throw new Exception("Usuario no encontrado");
         }
 
         // cifro la nueva contraseña con el hash
-        string nuevaContraseñaHash = HashPassword(request.nuevaPassword);
+        string nuevaContraseñaHash = hashService.ObtenerHash(request.nuevaPassword);
 
         // entidad valida sus propias reglas y actualizo
         usuario.ActualizarDatos(request.nuevoNombre, nuevaContraseñaHash);
@@ -26,12 +26,5 @@ public class ModificarMisDatosUseCase(IUsuarioRepository repositorio, IUnidadDeT
         unidadDeTrabajo.Guardar();
 
         return new ModificarMisDatosResponse();
-    }
-
-    private string HashPassword(string password)
-    {
-        var bytes = Encoding.UTF8.GetBytes(password);
-        var hash = SHA256.HashData(bytes);
-        return Convert.ToHexString(hash);
     }
 }

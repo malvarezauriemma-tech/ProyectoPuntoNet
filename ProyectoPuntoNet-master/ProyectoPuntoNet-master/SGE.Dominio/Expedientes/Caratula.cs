@@ -3,7 +3,7 @@ using SGE.Dominio.Comun;
 namespace SGE.Dominio.Expedientes;
 public record class Caratula
 {
-    public String Valor {get;}
+    public String Valor {get; init;} = "";
 
     public Caratula(string valor)
     {
@@ -13,4 +13,6 @@ public record class Caratula
         }
         Valor = valor;
     }
+
+    protected Caratula() {}
 }

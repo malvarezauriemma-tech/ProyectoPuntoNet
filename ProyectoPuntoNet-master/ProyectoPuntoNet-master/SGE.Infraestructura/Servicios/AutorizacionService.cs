@@ -10,9 +10,11 @@ public class AutorizacionService(IUsuarioRepository repo) : IAutorizacionService
     {
         var usuario = repo.ObtenerPorId(idUsuario);
         if (usuario == null) return false;
+
+        // el administrador siempre posee el acceso
         if (usuario.EsAdministrador) return true;
 
-        // Regla de implicancia: ExpedienteBaja implica TramiteBaja [4]
+        // Regla de implicancia: ExpedienteBaja implica TramiteBaja 
         if (permisoRequerido == Permiso.TramiteBaja && usuario.Permisos.Contains(Permiso.ExpedienteBaja))
             return true;
 

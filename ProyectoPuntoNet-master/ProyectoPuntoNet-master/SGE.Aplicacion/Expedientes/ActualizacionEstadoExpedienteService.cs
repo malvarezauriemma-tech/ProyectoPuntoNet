@@ -17,12 +17,10 @@ public class ActualizacionEstadoExpedienteService(IExpedienteRepository expedien
         var ultimoTramite = tramites.OrderByDescending(t => t.FechaCreacion).FirstOrDefault();
 
         // pedir a entidad que actualice estado
-        bool huboCambio = expediente.ActualizarEstado(ultimoTramite?.Etiqueta, usuarioId);
+        // el EF core detecta el cambio automaticamente
+        expediente.ActualizarEstado(ultimoTramite?.Etiqueta, usuarioId);
 
-        // si cambio el estado, lo guardo al expediente modificado
-        if (huboCambio)
-        {
-            expedienteRepo.Modificar(expediente);
-        }
+        // no llamo ni modificar ni guardar ya que el caso de uso que invoco este metodo se ocupa de eso
+
     }
 }

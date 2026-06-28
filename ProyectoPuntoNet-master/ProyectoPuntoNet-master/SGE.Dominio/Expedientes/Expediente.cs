@@ -5,13 +5,13 @@ using SGE.Dominio.Comun;
 public class Expediente
 {
     public Guid Id {get ; private set;}
-    public Caratula Caratula {get; private set;} // value object
+    public Caratula Caratula {get; private set;} = null!;// value object
     public DateTime FechaCreacion {get; private set;}
     public DateTime FechaUltimaModificacion {get; private set;}
     public Guid UsuarioUltimoCambio {get; private set;}
     public EstadoExpediente Estado {get; private set;} // enumerativo
 
-    // constructor privado para la reconstruccion
+    // constructor publico
     public Expediente(Caratula caratula, Guid usuarioID)
     {
         if (usuarioID == Guid.Empty)

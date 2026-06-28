@@ -31,7 +31,7 @@ public static class DependencyInjection
 
         // servicios de seguridad y autorizacion
         services.AddScoped<IAutorizacionService, AutorizacionService>();
-        services.AddScoped<IHashService, HashService>(); // registro obligatorio 
+        services.AddScoped<IHashService, HashService>(); 
         
         // retornamos, para poder permitir el encadenamiento de metodos
         return services;

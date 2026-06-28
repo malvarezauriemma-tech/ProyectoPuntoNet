@@ -10,7 +10,7 @@ public class Tramite
 
     public EtiquetaTramite Etiqueta { get; private set; }
 
-    public ContenidoTramite Contenido { get; private set; }
+    public ContenidoTramite Contenido { get; private set; } = null!;
 
     public DateTime FechaCreacion { get; private set; }
 
@@ -18,7 +18,7 @@ public class Tramite
 
     public Guid UsuarioUltimoCambio { get; private set; }
 
-    // constructor privado para reconstruccion
+    // constructor publico
     public Tramite(Guid expedienteId, EtiquetaTramite etiqueta, ContenidoTramite contenido, Guid usuarioId)
     {
         if (expedienteId == Guid.Empty)
